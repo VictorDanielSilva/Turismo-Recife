@@ -6,6 +6,9 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Cabeçalho */
@@ -14,6 +17,7 @@ header {
     color: white;
     padding: 20px 0;
     text-align: center;
+    flex: 0 1 auto;
 }
 
 /* Navegação */
@@ -21,6 +25,9 @@ nav {
     background-color: #333;
     padding: 10px 0;
     text-align: center;
+    flex: 0 1 auto;
+    display: flex;
+    justify-content: center;
 }
 
 nav a {
@@ -37,6 +44,7 @@ nav a:hover {
 /* Conteúdo Principal */
 main {
     padding: 20px;
+    flex: 1 0 auto;
 }
 
 h2 {
@@ -50,9 +58,17 @@ p {
 /* Seções */
 section {
     margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Imagens */
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -73,13 +89,13 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
+    flex: 0 1 auto;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-    nav a {
-        display: block;
-        margin: 10px 0;
+    nav {
+        flex-direction: column;
     }
 
     main {
